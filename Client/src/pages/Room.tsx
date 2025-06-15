@@ -576,7 +576,7 @@ export default function Room() {
                   </div>
                 )}
               </div>
-              <div className='w-5/6 flex max-md:grid max-md:grid-cols-3 mx-auto rounded-lg p-1 my-5 container card justify-center max-md:ps-20 gap-4'>
+              <div className='w-5/6 flex max-md:grid max-md:grid-cols-3 mx-auto rounded-lg p-1 my-5 container card justify-center max-md:ps-5 gap-4'>
                 <SquareButton 
                   icon={localMediaState.audio ? "Mic" : "MicOff"} 
                   bgColor={localMediaState.audio ? "#11CEAD" : "#ef4444"} 
