@@ -1,6 +1,6 @@
-# 🎥 VidMeet — A Real-Time Video Conferencing App
+# 🎥 VidMeet — A Real-Time Video Calling App
 
-VidMeet is a full-stack WebRTC-powered video conferencing platform built with the MERN stack, Socket.IO, and React. It supports real-time audio/video calling, screen sharing, chat, and more — all in the browser.
+VidMeet is a full-stack WebRTC-powered video Calling platform built with the MERN stack, Socket.IO, and React. It supports real-time audio/video calling, screen sharing, chat, and more — all in the browser.
 
 ## 🚀 Features
 
@@ -33,7 +33,7 @@ VidMeet is a full-stack WebRTC-powered video conferencing platform built with th
 ## 📂 Project Structure
 
 ```
-Video_Conferencing/
+Video_Calling/
 ├── Client/                 # React frontend (Vite + TypeScript)
 │   ├── public/
 │   ├── src/
