@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <header className="z-50 sticky top-0 w-full backdrop-blur shadow-2xl-md text-text border-b border-[rgb(var(--color-border))]  shadow-sm">
       <nav className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
-        <div className="text-2xl hover:drop-shadow-[0_0_0.75rem_#9333ea] cursor-pointer font-bold">VidMeet</div>
+        <Link to="/"><div className="text-2xl hover:drop-shadow-[0_0_0.75rem_#9333ea] cursor-pointer font-bold">VidMeet</div></Link>
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 items-center font-medium">
           <li><Link to="/#hero" className="hover:text-[rgb(var(--color-primary))] transition">Home</Link></li>
