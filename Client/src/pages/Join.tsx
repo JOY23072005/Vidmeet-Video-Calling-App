@@ -89,7 +89,11 @@ export default function Join(){
                 </div>
                 {/* Image hero */}
                 <div className="Image">
-                <img className="mx-auto max-md:w-4/6 w-full" src={chat_noti}/>
+                <img className="mx-auto max-md:w-4/6 w-full opacity-0 translate-x-5 transition-all duration-700 ease-in-out" src={chat_noti}
+                onLoad={(e) => {
+                    e.currentTarget.classList.remove("opacity-0", "translate-x-5");
+                }}
+                />
                 </div>
             </form>
         </section>
