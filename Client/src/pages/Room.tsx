@@ -533,7 +533,7 @@ export default function Room() {
                       stream={myStream}
                       isLocal={true}
                       title="You"
-                      className="h-[150px]"
+                      className="h-[150px] max-w-xs"
                       handleCallEnd={handleCallEnd}
                       onError={(error) => console.error('Local video failed:', error)}
                     />
