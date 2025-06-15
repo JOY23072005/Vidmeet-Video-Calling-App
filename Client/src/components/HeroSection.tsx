@@ -13,7 +13,11 @@ export default function HeroSection() {
         </p>
       </div>
       {/* Image hero */}
-      <img className="w-full" src={images}/>
+      <img className="w-full opacity-0 translate-x-5 transition-all duration-700 ease-in-out" src={images}
+      onLoad={(e) => {
+        e.currentTarget.classList.remove("opacity-0", "translate-x-5");
+      }}
+      />
     </section>
   )
 }
