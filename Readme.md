@@ -27,8 +27,8 @@ VidMeet is a full-stack WebRTC-powered video Calling platform built with the MER
 
 ## 🌐 Live Demo
 
-* 🔗 **Frontend (Vercel)**: [https://vidmeet-frontend.vercel.app](https://vidmeet-frontend.vercel.app)
-* 🔗 **Backend (Render)**: [https://vidmeet-backend.onrender.com](https://vidmeet-backend.onrender.com)
+* 🔗 **Frontend (Vercel)**: [https://vidmeet-video-calling-app.vercel.app/](https://vidmeet-video-calling-app.vercel.app)
+* 🔗 **Backend (Render)**: [https://vidmeet-video-calling-app.onrender.com/](https://vidmeet-video-calling-app.onrender.com)
 
 ## 📂 Project Structure
 
@@ -125,7 +125,7 @@ This generates the `/dist` folder which Vercel uses.
 ## 🧑‍💻 Author
 
 * Developed with ❤️ by **Joydeep Hans**
-* Connect on [LinkedIn](https://www.linkedin.com/in/joydeephans/)
+* Connect on [LinkedIn](https://www.linkedin.com/in/joydeep-hans-65870928a/)
 
 ## 📄 License
 
