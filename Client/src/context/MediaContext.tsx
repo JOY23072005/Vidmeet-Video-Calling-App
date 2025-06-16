@@ -17,16 +17,30 @@ const MediaProvider: React.FC<{ children: React.ReactNode }> = ({ children }) =>
 
   const cleanup = useCallback(() => {
     console.log("Cleaning up media...");
-
-    myStream?.getTracks().forEach((track) => {
-      console.log("Cleaning Client stream!");
-      track.stop()
+  
+    // Clone tracks array before iteration to avoid concurrent modification issues
+    const myTracks = myStream ? [...myStream.getTracks()] : [];
+    const remoteTracks = remoteStream ? [...remoteStream.getTracks()] : [];
+  
+    myTracks.forEach((track) => {
+      console.log(`Stopping my ${track.kind} track`);
+      track.stop();
+      myStream?.removeTrack(track); // Explicitly remove track from stream
     });
-    remoteStream?.getTracks().forEach((track) => {
-      console.log("Cleaning remote stream!");
-      track.stop()
+  
+    remoteTracks.forEach((track) => {
+      console.log(`Stopping remote ${track.kind} track`);
+      track.stop();
+      remoteStream?.removeTrack(track); // Explicitly remove track from stream
     });
-
+  
+    // Additional cleanup for video elements
+    if (myStream) {
+      myStream.getVideoTracks().forEach(track => {
+        track.enabled = false; // Explicitly disable before stopping
+      });
+    }
+  
     setMyStream(null);
     setRemoteStream(null);
   }, [myStream, remoteStream]);
