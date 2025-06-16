@@ -57,7 +57,7 @@ export default function Room() {
   const socket = useSocket();
   const [remoteName, setRemoteName] = useState<string>("");
   const [remoteSocketId, setRemoteSocketId] = useState<string | null>(null);
-  const { myStream, setMyStream, remoteStream, setRemoteStream } = useMedia();
+  const { myStream, setMyStream, remoteStream, setRemoteStream, cleanup } = useMedia();
   const [connectionState, setConnectionState] = useState<string>('new');
   const [iceConnectionState, setIceConnectionState] = useState<string>('new');
 
@@ -425,15 +425,7 @@ export default function Room() {
 
   const handleCallEnd = useCallback(() => {
     console.log("call Ended!");
-    if (myStream) {
-      myStream.getTracks().forEach(track => track.stop());
-    }
-    if (remoteStream) {
-      remoteStream.getTracks().forEach(track => track.stop());
-    }
-    setMyStream(null);
-    setRemoteStream(null);
-    setRemoteSocketId(null);
+    cleanup();
     navigate('/Vidmeet');
   }, [myStream, remoteStream]);
 
