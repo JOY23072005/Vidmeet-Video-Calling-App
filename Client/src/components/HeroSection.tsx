@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <section id="hero" className="section grid md:grid-cols-2 pe-0 pt-0 md:space-x-12">
       {/* Text hero */}
-      <div className="flex flex-col justify-center max-md:my-20">
+      <div className="flex flex-col justify-center max-md:my-20 animate-[slide-down_1s_ease-in-out]">
         <h1 className="text-heading">VidMeet</h1>
         <p className="text-subheading">
           Welcome to VidMeet — a sleek, modern video conferencing platform built for fast, secure, and high-quality meetings.
