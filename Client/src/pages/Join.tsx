@@ -74,7 +74,7 @@ export default function Join(){
         <section id="hero" className="section ">
             <form onSubmit={handleSubmitForm} className='container grid md:grid-cols-2 md:space-x-12'>
                 {/* Text hero */}
-                <div className="mx-auto flex flex-col justify-center max-md:my-20">
+                <div className="mx-auto flex flex-col justify-center max-md:my-20 animate-[slide-down_1s_ease-in-out]"> 
                     <p className="text-subheading">
                         Create or Join Meeting
                     </p>
